@@ -1,0 +1,1521 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+<title>S&amp;B Monatsreport September 2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --ground:#F6F9FB; --surface:#FFFFFF; --surface-2:#EAF1F6;
+  --ink:#2C0E18; --ink-2:#4F3440; --muted:#6B5A62; --line:#DCE6EE;
+  --brand:#45142D; --brand-2:#2C0E18;
+  --s1:#45142D; --s2:#4F7A99; --s3:#9A5C76;
+  --pos:#14775A; --pos-bg:#E4F5EE; --neg:#A8322A; --neg-bg:#FBEAE8;
+  --flat:#6B5A62; --flat-bg:#EDF2F6;
+  --shadow:0 1px 2px rgba(44,14,24,.05), 0 8px 24px -16px rgba(44,14,24,.25);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#16070D; --surface:#22101A; --surface-2:#2E1824;
+    --ink:#F4EEF1; --ink-2:#D7C9D0; --muted:#A8949E; --line:#3F2632;
+    --brand:#C5D8E6; --brand-2:#E2ECF3;
+    --s1:#C5D8E6; --s2:#D49AB2; --s3:#8FB3CC;
+    --pos:#57C9A0; --pos-bg:#14342B; --neg:#EE8B80; --neg-bg:#3A1E1C;
+    --flat:#A8949E; --flat-bg:#2B1822;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#16070D; --surface:#22101A; --surface-2:#2E1824;
+  --ink:#F4EEF1; --ink-2:#D7C9D0; --muted:#A8949E; --line:#3F2632;
+  --brand:#C5D8E6; --brand-2:#E2ECF3;
+  --s1:#C5D8E6; --s2:#D49AB2; --s3:#8FB3CC;
+  --pos:#57C9A0; --pos-bg:#14342B; --neg:#EE8B80; --neg-bg:#3A1E1C;
+  --flat:#A8949E; --flat-bg:#2B1822;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.7);
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Source Sans 3","Segoe UI",system-ui,sans-serif; font-size:16px;
+  line-height:1.55; -webkit-font-smoothing:antialiased; }
+.wrap { max-width:1120px; margin:0 auto; padding:0 24px 80px; }
+h1,h2,h3 { font-family:Archivo,"Segoe UI",system-ui,sans-serif; text-wrap:balance; margin:0; }
+
+.masthead { border-bottom:1px solid var(--line); background:var(--surface);
+  padding:32px 0 26px; margin-bottom:32px; }
+.masthead .wrap { padding-bottom:0; display:flex; flex-wrap:wrap; gap:22px;
+  align-items:flex-end; justify-content:space-between; }
+.brandmark { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+.brandmark span { font-family:"IBM Plex Mono",monospace; font-size:11px;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+.dot { width:9px; height:9px; border-radius:2px;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2)); }
+h1 { font-size:clamp(28px,4vw,40px); font-weight:700; letter-spacing:-.02em; line-height:1.1; }
+h1 em { font-style:normal; color:var(--brand); }
+.sub { color:var(--muted); margin:8px 0 0; font-size:15px; }
+
+.brands { display:flex; gap:4px; padding:4px; border:1px solid var(--line);
+  border-radius:11px; background:var(--surface-2); }
+.brand-btn { font:600 14px/1 Archivo,sans-serif; padding:11px 18px; border:0;
+  border-radius:8px; background:transparent; color:var(--ink-2); cursor:pointer; }
+.brand-btn.is-active { background:var(--surface); color:var(--brand); box-shadow:var(--shadow); }
+.brand-btn:focus-visible, .scope-btn:focus-visible, .kscope-btn:focus-visible { outline:2px solid var(--brand); outline-offset:2px; }
+
+.controls { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.months { display:inline-flex; align-items:center; gap:8px; padding:4px 4px 4px 14px; border-radius:11px;
+  background:var(--surface-2); font:500 12px/1 "IBM Plex Mono",monospace; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--muted); }
+.months select { font:600 14px/1 "Source Sans 3",sans-serif; color:var(--brand); background:var(--surface);
+  border:1px solid var(--line); border-radius:8px; padding:9px 30px 9px 12px; min-height:40px; cursor:pointer;
+  appearance:none; -webkit-appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--brand) 50%),linear-gradient(135deg,var(--brand) 50%,transparent 50%);
+  background-position:calc(100% - 16px) 50%, calc(100% - 11px) 50%; background-size:5px 5px; background-repeat:no-repeat; }
+.months select:focus-visible { outline:2px solid var(--brand); outline-offset:2px; }
+section { margin-top:42px; }
+section:first-child { margin-top:0; }
+.sec-head { display:flex; align-items:baseline; gap:14px; margin-bottom:16px;
+  padding-bottom:10px; border-bottom:1px solid var(--line); }
+.sec-head h2 { font-size:19px; font-weight:600; letter-spacing:-.01em; }
+.sec-head p { margin:0; color:var(--muted); font-size:13.5px; }
+.sec-note { margin:0 0 16px; color:var(--muted); font-size:13.5px; max-width:70ch; }
+.subhead { display:flex; align-items:baseline; gap:10px; margin:26px 0 12px; }
+.subhead h3 { font-size:15px; font-weight:600; }
+.acct { font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--muted); }
+
+.scopes { display:inline-flex; gap:4px; padding:4px; border:1px solid var(--line);
+  border-radius:10px; background:var(--surface-2); margin-bottom:16px; }
+.scope-btn, .kscope-btn { font:500 13px/1 "IBM Plex Mono",monospace; padding:9px 14px; border:0;
+  border-radius:7px; background:transparent; color:var(--ink-2); cursor:pointer; }
+.scope-btn.is-active, .kscope-btn.is-active { background:var(--surface); color:var(--brand); box-shadow:var(--shadow); }
+
+.tiles { display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(212px,1fr)); }
+.tiles.headline { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); margin-bottom:6px; }
+.tile { background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:16px 18px 15px; box-shadow:var(--shadow); }
+.tile-label { margin:0 0 10px; font:500 11px/1 "IBM Plex Mono",monospace;
+  letter-spacing:.13em; text-transform:uppercase; color:var(--muted); }
+.tile-value { margin:0; font-family:Archivo,sans-serif; font-weight:600; font-size:25px;
+  letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+.tiles.headline .tile-value { font-size:30px; }
+.tile-delta { margin:8px 0 0; font-size:13px; font-variant-numeric:tabular-nums;
+  display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.tile-delta.pos { color:var(--pos); } .tile-delta.neg { color:var(--neg); }
+.tile-delta.flat { color:var(--flat); }
+.tile-prev { color:var(--muted); font-size:12.5px; }
+.tile-note { display:block; margin-top:6px; color:var(--muted); font-size:12px; }
+
+.table-wrap { overflow-x:auto; background:var(--surface); border:1px solid var(--line);
+  border-radius:12px; box-shadow:var(--shadow); margin-top:16px; }
+table { width:100%; border-collapse:collapse; font-size:14px; min-width:680px; }
+caption { text-align:left; font:600 12px/1 "IBM Plex Mono",monospace; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--muted); padding:15px 18px 0; }
+th, td { padding:11px 18px; text-align:right; font-variant-numeric:tabular-nums;
+  border-bottom:1px solid var(--line); white-space:nowrap; }
+th { font:600 11px/1.3 "IBM Plex Mono",monospace; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--muted); }
+th:first-child, td.name { text-align:left; white-space:normal; }
+td.name { font-weight:600; }
+.num-strong { font-weight:600; }
+tfoot td { border-bottom:0; background:var(--surface-2); font-weight:600; }
+.chip { display:inline-block; padding:2px 8px; border-radius:20px; font-size:12.5px;
+  font-weight:600; font-variant-numeric:tabular-nums; }
+.chip.pos { color:var(--pos); background:var(--pos-bg); }
+.chip.neg { color:var(--neg); background:var(--neg-bg); }
+.chip.flat { color:var(--flat); background:var(--flat-bg); }
+
+.charts { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); margin-top:16px; }
+.chart { margin:0 0 16px; background:var(--surface); border:1px solid var(--line);
+  border-radius:12px; padding:18px; box-shadow:var(--shadow); }
+.chart figcaption h3 { font-size:15px; font-weight:600; }
+.chart figcaption p { margin:3px 0 16px; color:var(--muted); font-size:12.5px; }
+.bars { display:flex; flex-direction:column; gap:9px; }
+.bar-row { display:grid; grid-template-columns:minmax(130px,1.4fr) 1.5fr auto; gap:12px;
+  align-items:center; font-size:13px; }
+.bar-name { color:var(--ink-2); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.bar-track { height:9px; background:var(--surface-2); border-radius:5px; overflow:hidden; }
+.bar-fill { display:block; height:100%; border-radius:0 4px 4px 0; }
+.fn-card { padding-bottom:20px; }
+.fn-total { font:600 30px/1.1 Archivo,sans-serif !important; color:var(--ink) !important; margin:6px 0 6px !important; display:flex; align-items:baseline; gap:10px; }
+.fn-total .fn-delta { font-size:14px; font-family:"Source Sans 3",sans-serif; }
+.fn-scroll { overflow-x:auto; }
+.fn-grid { display:grid; grid-template-columns:repeat(4,minmax(120px,1fr)); min-width:500px; }
+.fn-col { display:flex; flex-direction:column; border-left:1px solid var(--line); }
+.fn-col:first-child { border-left:0; }
+.fn-head { padding:4px 12px 14px; display:flex; flex-direction:column; gap:2px; }
+.fn-col:first-child .fn-head { padding-left:0; }
+.fn-label { margin:0; color:var(--ink-2); font-size:13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.fn-pct, .fn-num { margin:0; font-size:19px; font-variant-numeric:tabular-nums; color:var(--ink); }
+.fn-delta { font-size:12.5px; font-weight:600; font-variant-numeric:tabular-nums; }
+.fn-delta.pos { color:var(--pos); } .fn-delta.neg { color:var(--neg); } .fn-delta.flat { color:var(--flat); }
+.fn-users { color:var(--muted); font-size:12px; margin-top:4px; }
+.fn-plot { position:relative; height:190px; margin-top:auto; display:flex; align-items:flex-end; }
+.fn-bar { position:relative; display:block; width:78%; background:var(--s1); border-radius:6px 0 0 0; }
+.fn-col:last-child .fn-bar { width:100%; border-radius:0 6px 0 0; }
+.fn-col + .fn-col .fn-bar { border-radius:0; }
+.fn-col:first-child .fn-bar { border-radius:6px 0 0 0; }
+.fn-col:last-child .fn-bar { border-radius:0 6px 0 0; }
+.fn-conn { width:22%; height:100%; display:block; }
+.fn-conn polygon { fill:var(--s1); opacity:.32; }
+.fn-break { position:absolute; left:0; right:0; top:22%; height:10px;
+  background:repeating-linear-gradient(180deg, var(--surface) 0 2px, transparent 2px 4px); opacity:.9; }
+.bar-val { font-variant-numeric:tabular-nums; font-weight:600; font-size:12.5px; }
+.empty { color:var(--muted); font-size:13.5px; margin:0; }
+
+.notes { background:var(--surface-2); border:1px solid var(--line); border-radius:12px;
+  padding:18px 22px; }
+.notes ul { margin:0; padding-left:20px; display:flex; flex-direction:column; gap:9px; }
+.notes li { color:var(--ink-2); max-width:80ch; }
+
+footer { margin-top:52px; padding-top:18px; border-top:1px solid var(--line);
+  color:var(--muted); font-size:12.5px; display:flex; justify-content:space-between;
+  gap:14px; flex-wrap:wrap; }
+@media (prefers-reduced-motion: reduce) { * { transition:none !important; } }
+</style>
+
+<header class="masthead">
+  <div class="wrap">
+    <div>
+      <div class="brandmark"><i class="dot"></i><span>Velonify · Monatsreporting</span></div>
+      <h1>Monatsreport <em id="m-cur">September 2026</em></h1>
+      <p class="sub">GA4, Google Ads und Klaviyo · Veränderung jeweils gegenüber <span id="m-prev">August 2026</span></p>
+    </div>
+    <div class="controls"><label class="months"><span>Monat</span><select id="month-select"><option value="2026-09" selected>September 2026</option><option value="2026-08">August 2026</option></select></label><div class="brands" role="group" aria-label="Marke wählen"><button type="button" class="brand-btn is-active" data-target="snb">Storz &amp; Bickel</button><button type="button" class="brand-btn" data-target="vapormed">Vapormed</button></div></div>
+  </div>
+</header>
+
+<main class="wrap">
+<div class="month-panel" data-month="2026-09" data-label="September 2026" data-prev="August 2026">
+<div class="brand-panel" data-brand="snb">
+  <section>
+    <div class="sec-head"><h2>GA4 – E-Commerce</h2><p>Veränderung gegenüber August 2026 (01.–31.08., vollständig)</p></div>
+    <div class="scopes" role="group" aria-label="Shop Scope"><button type="button" class="scope-btn is-active" data-target="total">D2C Gesamt</button><button type="button" class="scope-btn" data-target="main">D2C Main / EU</button><button type="button" class="scope-btn" data-target="us">D2C US</button><button type="button" class="scope-btn" data-target="b2b">B2B</button></div>
+    <div class="scope-panel" data-scope="total"><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">389.202 €</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−56,6 %<span class="tile-prev">vs. 895.769 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Transaktionen</p>
+  <p class="tile-value">2.458</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−46,8 %<span class="tile-prev">vs. 4.617</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Sessions</p>
+  <p class="tile-value">104.719</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−33,1 %<span class="tile-prev">vs. 156.536</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversion Rate</p>
+  <p class="tile-value">2,35 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−20,4 %<span class="tile-prev">vs. 2,95 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">158,34 €</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−18,4 %<span class="tile-prev">vs. 194,02 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Nutzer</p>
+  <p class="tile-value">61.380</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−34,0 %<span class="tile-prev">vs. 92.934</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Warenkorb-Adds</p>
+  <p class="tile-value">15.409</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−43,9 %<span class="tile-prev">vs. 27.466</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Checkouts</p>
+  <p class="tile-value">13.136</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−45,1 %<span class="tile-prev">vs. 23.938</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Neue Nutzer</p>
+  <p class="tile-value">50.185</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−38,1 %<span class="tile-prev">vs. 81.064</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Engagement Rate</p>
+  <p class="tile-value">63,8 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−2,5 %<span class="tile-prev">vs. 65,5 %</span></p>
+</article></div><div class="subhead"><h3>Conversion Journey</h3></div>
+<figure class="chart fn-card">
+  <figcaption><h3>Conversion-Rate-Aufschlüsselung</h3>
+    <p class="fn-total">2,33 % <span class="fn-delta neg">↘ −20,2 %</span></p>
+    <p>Sessions mit add_to_cart, begin_checkout bzw. purchase als Anteil an allen Sessions; Δ gegenüber Vormonat, darunter die Zahl der Nutzer je Stufe</p></figcaption>
+  <div class="fn-scroll"><div class="fn-grid"><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Sessions</p>
+    <p class="fn-pct">100,00 %</p><p class="fn-num">104.719</p>
+    <span class="fn-delta neg">↘ −33,1 %</span><span class="fn-users">61.380 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:100.00%"><span class="fn-break" aria-hidden="true"></span></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,0.00 100,54.00 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Warenkorb</p>
+    <p class="fn-pct">6,84 %</p><p class="fn-num">7.166</p>
+    <span class="fn-delta neg">↘ −43,5 %</span><span class="fn-users">6.199 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:46.00%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,54.00 100,63.69 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Checkout erreicht</p>
+    <p class="fn-pct">5,40 %</p><p class="fn-num">5.656</p>
+    <span class="fn-delta neg">↘ −44,1 %</span><span class="fn-users">4.893 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:36.31%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,63.69 100,84.32 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Kauf abgeschlossen</p>
+    <p class="fn-pct">2,33 %</p><p class="fn-num">2.443</p>
+    <span class="fn-delta neg">↘ −46,6 %</span><span class="fn-users">2.383 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:15.68%"></span></div>
+</div></div></div>
+</figure></div><div class="scope-panel" data-scope="main" hidden><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">104.822 €</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−68,3 %<span class="tile-prev">vs. 330.922 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Transaktionen</p>
+  <p class="tile-value">716</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−42,7 %<span class="tile-prev">vs. 1.250</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Sessions</p>
+  <p class="tile-value">65.200</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−30,0 %<span class="tile-prev">vs. 93.145</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversion Rate</p>
+  <p class="tile-value">1,10 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−18,2 %<span class="tile-prev">vs. 1,34 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">146,40 €</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−44,7 %<span class="tile-prev">vs. 264,74 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Nutzer</p>
+  <p class="tile-value">40.289</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−29,9 %<span class="tile-prev">vs. 57.502</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Warenkorb-Adds</p>
+  <p class="tile-value">7.144</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−40,3 %<span class="tile-prev">vs. 11.968</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Checkouts</p>
+  <p class="tile-value">5.825</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−44,4 %<span class="tile-prev">vs. 10.470</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Neue Nutzer</p>
+  <p class="tile-value">31.927</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−33,6 %<span class="tile-prev">vs. 48.099</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Engagement Rate</p>
+  <p class="tile-value">65,0 %</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+0,6 %<span class="tile-prev">vs. 64,6 %</span></p>
+</article></div><div class="subhead"><h3>Conversion Journey</h3></div>
+<figure class="chart fn-card">
+  <figcaption><h3>Conversion-Rate-Aufschlüsselung</h3>
+    <p class="fn-total">1,09 % <span class="fn-delta neg">↘ −18,0 %</span></p>
+    <p>Sessions mit add_to_cart, begin_checkout bzw. purchase als Anteil an allen Sessions; Δ gegenüber Vormonat, darunter die Zahl der Nutzer je Stufe</p></figcaption>
+  <div class="fn-scroll"><div class="fn-grid"><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Sessions</p>
+    <p class="fn-pct">100,00 %</p><p class="fn-num">65.200</p>
+    <span class="fn-delta neg">↘ −30,0 %</span><span class="fn-users">40.289 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:100.00%"><span class="fn-break" aria-hidden="true"></span></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,0.00 100,54.00 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Warenkorb</p>
+    <p class="fn-pct">5,19 %</p><p class="fn-num">3.387</p>
+    <span class="fn-delta neg">↘ −37,6 %</span><span class="fn-users">3.016 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:46.00%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,54.00 100,68.06 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Checkout erreicht</p>
+    <p class="fn-pct">3,61 %</p><p class="fn-num">2.352</p>
+    <span class="fn-delta neg">↘ −40,8 %</span><span class="fn-users">2.107 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:31.94%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,68.06 100,90.33 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Kauf abgeschlossen</p>
+    <p class="fn-pct">1,09 %</p><p class="fn-num">712</p>
+    <span class="fn-delta neg">↘ −42,6 %</span><span class="fn-users">697 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:9.67%"></span></div>
+</div></div></div>
+</figure></div><div class="scope-panel" data-scope="us" hidden><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">288.817 €</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−49,8 %<span class="tile-prev">vs. 574.964 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Transaktionen</p>
+  <p class="tile-value">1.767</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−48,3 %<span class="tile-prev">vs. 3.421</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Sessions</p>
+  <p class="tile-value">38.912</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−41,4 %<span class="tile-prev">vs. 66.448</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversion Rate</p>
+  <p class="tile-value">4,54 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−11,8 %<span class="tile-prev">vs. 5,15 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">163,45 €</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−2,7 %<span class="tile-prev">vs. 168,07 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Nutzer</p>
+  <p class="tile-value">22.926</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−41,3 %<span class="tile-prev">vs. 39.043</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Warenkorb-Adds</p>
+  <p class="tile-value">8.678</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−46,8 %<span class="tile-prev">vs. 16.300</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Checkouts</p>
+  <p class="tile-value">7.655</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−45,8 %<span class="tile-prev">vs. 14.114</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Neue Nutzer</p>
+  <p class="tile-value">18.765</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−45,4 %<span class="tile-prev">vs. 34.377</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Engagement Rate</p>
+  <p class="tile-value">66,2 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−1,4 %<span class="tile-prev">vs. 67,1 %</span></p>
+</article></div><div class="subhead"><h3>Conversion Journey</h3></div>
+<figure class="chart fn-card">
+  <figcaption><h3>Conversion-Rate-Aufschlüsselung</h3>
+    <p class="fn-total">4,51 % <span class="fn-delta neg">↘ −11,8 %</span></p>
+    <p>Sessions mit add_to_cart, begin_checkout bzw. purchase als Anteil an allen Sessions; Δ gegenüber Vormonat, darunter die Zahl der Nutzer je Stufe</p></figcaption>
+  <div class="fn-scroll"><div class="fn-grid"><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Sessions</p>
+    <p class="fn-pct">100,00 %</p><p class="fn-num">38.912</p>
+    <span class="fn-delta neg">↘ −41,4 %</span><span class="fn-users">22.926 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:100.00%"><span class="fn-break" aria-hidden="true"></span></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,0.00 100,54.00 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Warenkorb</p>
+    <p class="fn-pct">10,10 %</p><p class="fn-num">3.930</p>
+    <span class="fn-delta neg">↘ −47,5 %</span><span class="fn-users">3.389 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:46.00%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,54.00 100,60.37 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Checkout erreicht</p>
+    <p class="fn-pct">8,70 %</p><p class="fn-num">3.386</p>
+    <span class="fn-delta neg">↘ −46,8 %</span><span class="fn-users">2.933 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:39.63%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,60.37 100,79.45 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Kauf abgeschlossen</p>
+    <p class="fn-pct">4,51 %</p><p class="fn-num">1.756</p>
+    <span class="fn-delta neg">↘ −48,4 %</span><span class="fn-users">1.710 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:20.55%"></span></div>
+</div></div></div>
+</figure></div><div class="scope-panel" data-scope="b2b" hidden><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">0 €</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−100,0 %<span class="tile-prev">vs. 953.759 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Transaktionen</p>
+  <p class="tile-value">0</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−100,0 %<span class="tile-prev">vs. 75</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Sessions</p>
+  <p class="tile-value">5</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−99,4 %<span class="tile-prev">vs. 849</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversion Rate</p>
+  <p class="tile-value">0,00 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−100,0 %<span class="tile-prev">vs. 8,83 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">0,00 €</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−100,0 %<span class="tile-prev">vs. 12.716,79 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Nutzer</p>
+  <p class="tile-value">5</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−99,0 %<span class="tile-prev">vs. 498</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Warenkorb-Adds</p>
+  <p class="tile-value">0</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−100,0 %<span class="tile-prev">vs. 635</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Checkouts</p>
+  <p class="tile-value">0</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−100,0 %<span class="tile-prev">vs. 356</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Neue Nutzer</p>
+  <p class="tile-value">1</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−99,2 %<span class="tile-prev">vs. 125</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Engagement Rate</p>
+  <p class="tile-value">0,0 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−100,0 %<span class="tile-prev">vs. 78,7 %</span></p>
+</article></div><div class="subhead"><h3>Conversion Journey</h3></div>
+<figure class="chart fn-card">
+  <figcaption><h3>Conversion-Rate-Aufschlüsselung</h3>
+    <p class="fn-total">0,00 % <span class="fn-delta neg">↘ −100,0 %</span></p>
+    <p>Sessions mit add_to_cart, begin_checkout bzw. purchase als Anteil an allen Sessions; Δ gegenüber Vormonat, darunter die Zahl der Nutzer je Stufe</p></figcaption>
+  <div class="fn-scroll"><div class="fn-grid"><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Sessions</p>
+    <p class="fn-pct">100,00 %</p><p class="fn-num">5</p>
+    <span class="fn-delta neg">↘ −99,4 %</span><span class="fn-users">5 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:100.00%"><span class="fn-break" aria-hidden="true"></span></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,0.00 100,100.00 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Warenkorb</p>
+    <p class="fn-pct">0,00 %</p><p class="fn-num">0</p>
+    <span class="fn-delta neg">↘ −100,0 %</span><span class="fn-users">0 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:0.00%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,100.00 100,100.00 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Checkout erreicht</p>
+    <p class="fn-pct">0,00 %</p><p class="fn-num">0</p>
+    <span class="fn-delta neg">↘ −100,0 %</span><span class="fn-users">0 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:0.00%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,100.00 100,100.00 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Kauf abgeschlossen</p>
+    <p class="fn-pct">0,00 %</p><p class="fn-num">0</p>
+    <span class="fn-delta neg">↘ −100,0 %</span><span class="fn-users">0 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:0.00%"></span></div>
+</div></div></div>
+</figure></div>
+  </section>
+
+  <section>
+  <div class="sec-head"><h2>Google Ads</h2><p>je Konto</p></div>
+  <p class="sec-note">Conv.-Wert und Conversions kommen jetzt für beide Monate einheitlich aus der Kontotabelle im Verwaltungskonto (primäre Conversion-Aktionen). Der August-Report wies für Main/EU 7.012 € aus – das war der „Wert aller Conv.“ aus der Kampagnenansicht (inkl. sekundärer Aktionen). Zum Vergleich: Wert aller Conv. Main/EU September 37.292 €, August 7.033 €.</p>
+  <div class="subhead"><h3>Main / EU</h3>
+  <span class="acct">865-054-3349</span></div>
+<div class="tiles">
+<article class="tile">
+  <p class="tile-label">Conv.-Wert (Umsatz)</p>
+  <p class="tile-value">21.081,74 €</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+935,1 %<span class="tile-prev">vs. 2.036,62 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">ROAS</p>
+  <p class="tile-value">6,12x</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+895,9 %<span class="tile-prev">vs. 0,61x</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Kosten</p>
+  <p class="tile-value">3.445,76 €</p>
+  <p class="tile-delta neg"><span class="arrow">↑</span>+3,9 %<span class="tile-prev">vs. 3.315,30 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversions</p>
+  <p class="tile-value">243</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+262,7 %<span class="tile-prev">vs. 67</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Kosten je Conv.</p>
+  <p class="tile-value">14,18 €</p>
+  <p class="tile-delta pos"><span class="arrow">↓</span>−71,3 %<span class="tile-prev">vs. 49,48 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Klicks</p>
+  <p class="tile-value">1.459</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−30,9 %<span class="tile-prev">vs. 2.111</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Impressionen</p>
+  <p class="tile-value">19.001</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−63,3 %<span class="tile-prev">vs. 51.789</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">CTR</p>
+  <p class="tile-value">7,68 %</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+88,4 %<span class="tile-prev">vs. 4,08 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø CPC</p>
+  <p class="tile-value">2,36 €</p>
+  <p class="tile-delta neg"><span class="arrow">↑</span>+50,4 %<span class="tile-prev">vs. 1,57 €</span></p>
+</article>
+</div>
+<div class="subhead"><h3>US</h3>
+  <span class="acct">290-994-6441</span></div>
+<div class="tiles">
+<article class="tile">
+  <p class="tile-label">Conv.-Wert (Umsatz)</p>
+  <p class="tile-value">600,86 €</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+38,2 %<span class="tile-prev">vs. 434,93 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">ROAS</p>
+  <p class="tile-value">0,37x</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+51,4 %<span class="tile-prev">vs. 0,25x</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Kosten</p>
+  <p class="tile-value">1.616,01 €</p>
+  <p class="tile-delta pos"><span class="arrow">↓</span>−8,7 %<span class="tile-prev">vs. 1.770,72 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversions</p>
+  <p class="tile-value">7</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−12,5 %<span class="tile-prev">vs. 8</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Kosten je Conv.</p>
+  <p class="tile-value">230,86 €</p>
+  <p class="tile-delta neg"><span class="arrow">↑</span>+4,3 %<span class="tile-prev">vs. 221,34 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Klicks</p>
+  <p class="tile-value">698</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−18,4 %<span class="tile-prev">vs. 855</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Impressionen</p>
+  <p class="tile-value">12.227</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−66,7 %<span class="tile-prev">vs. 36.769</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">CTR</p>
+  <p class="tile-value">5,71 %</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+145,5 %<span class="tile-prev">vs. 2,33 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø CPC</p>
+  <p class="tile-value">2,32 €</p>
+  <p class="tile-delta neg"><span class="arrow">↑</span>+11,8 %<span class="tile-prev">vs. 2,07 €</span></p>
+</article>
+</div>
+</section>
+
+  <section>
+    <div class="sec-head"><h2>Klaviyo</h2><p>Flows und Kampagnen</p></div>
+    <div class="tiles headline">
+      <article class="tile">
+  <p class="tile-label">E-Mail-Umsatz gesamt</p>
+  <p class="tile-value">242.427 $</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+27,3 %<span class="tile-prev">vs. 190.389 $</span></p>
+</article>
+      <article class="tile">
+  <p class="tile-label">davon Flows</p>
+  <p class="tile-value">40.939 $</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−24,4 %<span class="tile-prev">vs. 54.151 $</span></p>
+</article>
+      <article class="tile">
+  <p class="tile-label">davon B2B (b2b = true)</p>
+  <p class="tile-value">94.081 $</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+768,0 %<span class="tile-prev">vs. 10.839 $</span></p><span class="tile-note">nur 2 Kampagnen: Happy Birthday Veazy DE 84.037 $ und EN 10.045 $</span>
+</article><article class="tile">
+  <p class="tile-label">davon D2C</p>
+  <p class="tile-value">148.346 $</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−17,4 %<span class="tile-prev">vs. 179.551 $</span></p><span class="tile-note">E-Mail-Umsatz gesamt − B2B</span>
+</article>
+    </div>
+    <div class="subhead"><h3>Gesamter Shop-Umsatz laut Magento (nicht E-Mail-Umsatz): D2C und B2B</h3></div><p class="sec-note">Das ist der gesamte Umsatz aller Shop-Bestellungen, nicht der durch E-Mails erzielte Umsatz (der steht oben als „E-Mail-Umsatz gesamt“). Klaviyo dient hier nur als Datenquelle für die Magento-Bestellungen. Bestellungen, die Magento an Klaviyo meldet („Placed Order“), getrennt nach der Profileigenschaft b2b = true (B2B) und allen übrigen Profilen (D2C). Beträge laut Klaviyo in $. Im August enthält D2C einen Ausreißer von rund 9,4 Mio. $ (Magento-Website-ID 8, Woche ab 03.08.) – der D2C-Vormonatsvergleich ist dadurch verzerrt.</p><div class="scopes kscopes" role="group" aria-label="Umsatz-Ansicht"><button type="button" class="kscope-btn is-active" data-target="d2c">D2C</button><button type="button" class="kscope-btn" data-target="b2b">B2B (b2b = true)</button></div><div class="kscope-panel" data-kscope="d2c"><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">1.413.587 $</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−87,1 %<span class="tile-prev">vs. 10.978.253 $</span></p>
+</article><article class="tile">
+  <p class="tile-label">Bestellungen</p>
+  <p class="tile-value">7.971</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−9,3 %<span class="tile-prev">vs. 8.789</span></p>
+</article><article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">177,34 $</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−85,8 %<span class="tile-prev">vs. 1.249,09 $</span></p>
+</article></div></div><div class="kscope-panel" data-kscope="b2b" hidden><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">1.519.461 $</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+4,2 %<span class="tile-prev">vs. 1.458.338 $</span></p>
+</article><article class="tile">
+  <p class="tile-label">Bestellungen</p>
+  <p class="tile-value">121</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+5,2 %<span class="tile-prev">vs. 115</span></p>
+</article><article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">12.557,53 $</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−1,0 %<span class="tile-prev">vs. 12.681,20 $</span></p>
+</article></div></div>
+    <div class="subhead"><h3>Flows</h3></div>
+    <div class="charts"><figure class="chart">
+  <figcaption><h3>Umsatz je Flow</h3><p>Klaviyo · September 2026</p></figcaption>
+  <div class="bars"><div class="bar-row"><span class="bar-name" title="AA Welcome Flow">AA Welcome Flow</span><span class="bar-track"><span class="bar-fill" style="width:100.0%;background:var(--s1)"></span></span><span class="bar-val">24.490 $</span></div><div class="bar-row"><span class="bar-name" title="AD Abandoned Checkout">AD Abandoned Checkout</span><span class="bar-track"><span class="bar-fill" style="width:50.4%;background:var(--s1)"></span></span><span class="bar-val">12.355 $</span></div><div class="bar-row"><span class="bar-name" title="AC Abandoned Cart">AC Abandoned Cart</span><span class="bar-track"><span class="bar-fill" style="width:10.9%;background:var(--s1)"></span></span><span class="bar-val">2.678 $</span></div><div class="bar-row"><span class="bar-name" title="AB Abandoned Browsing">AB Abandoned Browsing</span><span class="bar-track"><span class="bar-fill" style="width:5.8%;background:var(--s1)"></span></span><span class="bar-val">1.416 $</span></div></div>
+</figure></div>
+    <div class="table-wrap"><table>
+  <caption>Flows</caption>
+  <thead><tr><th scope="col">Flow</th><th scope="col">Empfänger</th><th scope="col">Zustellungen</th>
+    <th scope="col">Conv.-Rate</th><th scope="col">Bestellungen</th><th scope="col">Umsatz</th>
+    <th scope="col">Umsatz vs. VM</th></tr></thead>
+  <tbody><tr><td class="name">AA Welcome Flow</td><td>880</td><td>854</td><td>11,48 %</td><td>98</td><td class="num-strong">24.490 $</td><td><span class="chip neg">−27,8 %</span></td></tr><tr><td class="name">AD Abandoned Checkout</td><td>1.538</td><td>1.434</td><td>5,58 %</td><td>80</td><td class="num-strong">12.355 $</td><td><span class="chip neg">−4,7 %</span></td></tr><tr><td class="name">AC Abandoned Cart</td><td>413</td><td>387</td><td>3,36 %</td><td>13</td><td class="num-strong">2.678 $</td><td><span class="chip neg">−48,4 %</span></td></tr><tr><td class="name">AB Abandoned Browsing</td><td>479</td><td>446</td><td>2,69 %</td><td>12</td><td class="num-strong">1.416 $</td><td><span class="chip neg">−31,8 %</span></td></tr><tr><td class="name">Event Sign up Flow EN</td><td>1</td><td>1</td><td>0,00 %</td><td>0</td><td class="num-strong">0 $</td><td><span class="chip neg">−100,0 %</span></td></tr><tr><td class="name">Event Sign up Flow DE</td><td>1</td><td>1</td><td>0,00 %</td><td>0</td><td class="num-strong">0 $</td><td><span class="chip flat">–</span></td></tr></tbody>
+  <tfoot><tr><td class="name">Gesamt</td><td>3.312</td><td>3.123</td>
+    <td>–</td><td>203</td><td class="num-strong">40.939 $</td>
+    <td><span class="chip neg">−24,4 %</span></td></tr></tfoot>
+</table></div>
+    <div class="subhead"><h3>Kampagnen</h3></div><div class="tiles"><article class="tile">
+  <p class="tile-label">Kampagnen-Umsatz</p>
+  <p class="tile-value">201.488 $</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+47,9 %<span class="tile-prev">vs. 136.238 $</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Versendete Kampagnen</p>
+  <p class="tile-value">13</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−55,2 %<span class="tile-prev">vs. 29</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Empfänger</p>
+  <p class="tile-value">161.470</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−54,7 %<span class="tile-prev">vs. 356.551</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Open Rate</p>
+  <p class="tile-value">39,9 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−1,6 %<span class="tile-prev">vs. 40,5 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Click Rate</p>
+  <p class="tile-value">1,76 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−41,9 %<span class="tile-prev">vs. 3,03 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Bestellungen</p>
+  <p class="tile-value">441</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−48,6 %<span class="tile-prev">vs. 858</span></p>
+</article></div><div class="table-wrap"><table>
+  <caption>Top-Kampagnen nach Umsatz · September 2026</caption>
+  <thead><tr><th scope="col">Kampagne</th><th scope="col">Empfänger</th><th scope="col">Open</th>
+    <th scope="col">Click</th><th scope="col">Bestellungen</th><th scope="col">Umsatz</th></tr></thead>
+  <tbody><tr><td class="name">D2C_DE_HAPPY BIRTHDAY VEAZY</td><td>1.604</td><td>52,1 %</td><td>7,17 %</td><td>8</td><td class="num-strong">84.427,87 $</td></tr><tr><td class="name">Halbzeit Smokeless September_EN</td><td>48.210</td><td>39,9 %</td><td>1,70 %</td><td>127</td><td class="num-strong">52.184,91 $</td></tr><tr><td class="name">Smokeless September Start EN</td><td>50.106</td><td>37,8 %</td><td>1,67 %</td><td>139</td><td class="num-strong">36.608,17 $</td></tr><tr><td class="name">D2C_EN_HAPPY BIRTHDAY VEAZY</td><td>5.161</td><td>47,4 %</td><td>4,65 %</td><td>43</td><td class="num-strong">17.062,72 $</td></tr><tr><td class="name">D2C_Recap Smokeless September_EN (Klon)</td><td>46.947</td><td>39,8 %</td><td>1,06 %</td><td>87</td><td class="num-strong">8.925,04 $</td></tr><tr><td class="name">Smokeless September Start DE</td><td>1.677</td><td>49,0 %</td><td>4,65 %</td><td>12</td><td class="num-strong">871,73 $</td></tr><tr><td class="name">D2C_Recap Smokeless September_DE</td><td>1.719</td><td>51,2 %</td><td>2,97 %</td><td>11</td><td class="num-strong">481,98 $</td></tr><tr><td class="name">D2C_Phase Out CY+/PY_Kanada</td><td>3.957</td><td>41,2 %</td><td>3,69 %</td><td>5</td><td class="num-strong">360,59 $</td></tr><tr><td class="name">VAPORMED_EN_PMS Survey (B2B-Listen)</td><td>176</td><td>43,2 %</td><td>2,84 %</td><td>1</td><td class="num-strong">336,18 $</td></tr><tr><td class="name">Halbzeit Smokeless September_DE</td><td>1.698</td><td>49,0 %</td><td>3,18 %</td><td>8</td><td class="num-strong">228,54 $</td></tr></tbody>
+</table></div><figure class="chart">
+  <figcaption><h3>Umsatz je Kampagne (Top 10)</h3><p>Klaviyo · September 2026</p></figcaption>
+  <div class="bars"><div class="bar-row"><span class="bar-name" title="D2C_DE_HAPPY BIRTHDAY VEAZY">D2C_DE_HAPPY BIRTHDAY VEAZY</span><span class="bar-track"><span class="bar-fill" style="width:100.0%;background:var(--s2)"></span></span><span class="bar-val">84.428 $</span></div><div class="bar-row"><span class="bar-name" title="Halbzeit Smokeless September_EN">Halbzeit Smokeless September_EN</span><span class="bar-track"><span class="bar-fill" style="width:61.8%;background:var(--s2)"></span></span><span class="bar-val">52.185 $</span></div><div class="bar-row"><span class="bar-name" title="Smokeless September Start EN">Smokeless September Start EN</span><span class="bar-track"><span class="bar-fill" style="width:43.4%;background:var(--s2)"></span></span><span class="bar-val">36.608 $</span></div><div class="bar-row"><span class="bar-name" title="D2C_EN_HAPPY BIRTHDAY VEAZY">D2C_EN_HAPPY BIRTHDAY VEAZY</span><span class="bar-track"><span class="bar-fill" style="width:20.2%;background:var(--s2)"></span></span><span class="bar-val">17.063 $</span></div><div class="bar-row"><span class="bar-name" title="D2C_Recap Smokeless September_EN (Klon)">D2C_Recap Smokeless September_EN (Klon)</span><span class="bar-track"><span class="bar-fill" style="width:10.6%;background:var(--s2)"></span></span><span class="bar-val">8.925 $</span></div><div class="bar-row"><span class="bar-name" title="Smokeless September Start DE">Smokeless September Start DE</span><span class="bar-track"><span class="bar-fill" style="width:2.0%;background:var(--s2)"></span></span><span class="bar-val">872 $</span></div><div class="bar-row"><span class="bar-name" title="D2C_Recap Smokeless September_DE">D2C_Recap Smokeless September_DE</span><span class="bar-track"><span class="bar-fill" style="width:2.0%;background:var(--s2)"></span></span><span class="bar-val">482 $</span></div><div class="bar-row"><span class="bar-name" title="D2C_Phase Out CY+/PY_Kanada">D2C_Phase Out CY+/PY_Kanada</span><span class="bar-track"><span class="bar-fill" style="width:2.0%;background:var(--s2)"></span></span><span class="bar-val">361 $</span></div><div class="bar-row"><span class="bar-name" title="VAPORMED_EN_PMS Survey (B2B-Listen)">VAPORMED_EN_PMS Survey (B2B-Listen)</span><span class="bar-track"><span class="bar-fill" style="width:2.0%;background:var(--s2)"></span></span><span class="bar-val">336 $</span></div><div class="bar-row"><span class="bar-name" title="Halbzeit Smokeless September_DE">Halbzeit Smokeless September_DE</span><span class="bar-track"><span class="bar-fill" style="width:2.0%;background:var(--s2)"></span></span><span class="bar-val">229 $</span></div></div>
+</figure>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Einordnung</h2><p>Was in den Zahlen steckt</p></div>
+    <div class="notes"><ul><li>Wichtigster Befund – Messbruch ab 25./26.08.: Auf b2b.storz-bickel.com kommen seit dem 26.08. praktisch keine GA4-Daten mehr an (September: 5 Sessions, 0 Käufe; August: 849 Sessions, 75 Käufe, 953.759 €). Gleichzeitig fällt www.storz-bickel.com stufenartig von rund 5.500 auf rund 3.400 Sessions pro Tag (Käufe von ~165 auf ~80 pro Tag) und bleibt den ganzen September auf diesem Niveau. Ein schleichender Nachfragerückgang sieht anders aus – vor der Kundenkommunikation klären, was am 25./26.08. geändert wurde (Tracking, Consent-Banner, Shop- oder B2B-Umstellung).</li><li>D2C-Umsatz laut GA4 895.769 € → 389.202 € (−56,6 %), Käufe 4.617 → 2.458 (−46,8 %), Sessions −33,1 %. Main/EU verliert 68,3 % Umsatz, US 49,8 %. Ein Teil davon ist Rückgang des außergewöhnlichen August-Warenkorbs in Main/EU (Ø Bestellwert 265 € → 146 €, wieder auf Juli-Niveau); der Großteil fällt mit dem Messbruch zusammen und ist deshalb nur eingeschränkt als echte Entwicklung lesbar.</li><li>Conversion Journey D2C: Die Add-to-Cart-Rate sinkt von 8,10 % auf 6,84 % der Sessions; 6.199 Nutzer hatten Produkte im Warenkorb (August 10.658). Von ihnen erreichten 78,9 % den Checkout (August 80,3 %), und 48,7 % der Checkout-Nutzer kauften (August 51,8 %). Die Stufenraten bleiben also nahezu stabil – der Rückgang kommt vor allem aus weniger erfassten Sessions und Nutzern, was zur These des Messbruchs passt. Main/EU liegt deutlich unter US (Add-to-Cart-Rate 5,19 % vs. 10,10 %, Checkout → Kauf 33,1 % vs. 58,3 %) – der Checkout im EU-Shop ist die größte Stellschraube.</li><li>B2B: GA4 erfasst seit dem 26.08. keine B2B-Daten mehr, der B2B-Block im GA4-Teil zeigt deshalb 0 €. Magento meldet an Klaviyo für September aber 121 B2B-Bestellungen über 1,52 Mio. $ (August: 115 Bestellungen, 1,46 Mio. $) – das Geschäft läuft also weiter, nur das GA4-Tracking auf b2b.storz-bickel.com fehlt.</li><li>Google Ads Main/EU: bei ähnlichem Budget (3.446 €) deutlich weniger Reichweite (Impressionen −63 %), aber höhere CTR (4,08 % → 7,68 %) und 243 statt 67 Conversions mit 21.082 € Conv.-Wert (ROAS 6,12 statt 0,61). Eine Conversion-Rate von 16,6 % passt nicht zum Rückgang der D2C-Käufe in GA4 – die gezählten Conversion-Aktionen und ihre Werte prüfen, bevor der ROAS-Sprung kommuniziert wird.</li><li>Google Ads US: 1.616 € Kosten, 7 Conversions, 601 € Conv.-Wert (ROAS 0,37). Impressionen −67 % bei steigendem CPC (2,07 € → 2,32 €).</li><li>Im Google-Ads-Konto Main/EU steht der Hinweis „Ihr Konto verstößt gegen unsere Richtlinien zum Kundenabgleich“ – Customer-Match-Listen prüfen.</li><li>Klaviyo-Flows: $54.151 → $40.939 (−24 %). Der Rückgang kommt aus weniger Flow-Eintritten (Welcome 1.732 → 880 Empfänger, Abandoned Cart 1.113 → 413) – passend zum geringeren Shop-Traffic. Die Conversion-Raten steigen in allen vier Kern-Flows (Welcome 8,3 % → 11,5 %).</li><li>Kampagnen: 13 statt 29 Versände, aber 201.488 $ statt 136.238 $ Umsatz. 94.081 $ davon stammen von B2B-Kunden (Profil b2b = true), und zwar ausschließlich aus den beiden „Happy Birthday Veazy“-Kampagnen: DE 84.037 $ von 84.428 $, EN 10.045 $ von 17.063 $. Ohne B2B liegt der E-Mail-Umsatz bei 148.346 $ (Kampagnen 107.407 $ + Flows 40.939 $); die Flows enthalten keinen B2B-Umsatz. Stärkste D2C-Kampagne: „Halbzeit Smokeless September EN“ (52.185 $, 127 Bestellungen).</li><li>Methodik: „Empfänger“ je Kampagne ist jetzt die tatsächliche Empfängerzahl (Öffnungen ÷ Öffnungsrate). Im August-Report stand dort die Zahl der Öffner (141.765); der August-Vergleichswert ist hier korrigiert (356.551).</li><li>GA4-Datenaufbewahrung: Der August war in der S&amp;B-Property vollständig abrufbar (keine Warnung) – der Vergleich deckt den ganzen Monat ab.</li></ul></div>
+  </section>
+</div>
+<div class="brand-panel" data-brand="vapormed" hidden>
+  <section>
+    <div class="sec-head"><h2>GA4 – E-Commerce</h2><p>Veränderung gegenüber August 2026 (01.–31.08. laut August-Report)</p></div>
+    
+    <div class="scope-panel" data-scope="total"><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">7.752 €</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+21,3 %<span class="tile-prev">vs. 6.389 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Transaktionen</p>
+  <p class="tile-value">42</p>
+  <p class="tile-delta flat"><span class="arrow">→</span>±0,0 %<span class="tile-prev">vs. 42</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Sessions</p>
+  <p class="tile-value">6.468</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−14,7 %<span class="tile-prev">vs. 7.587</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversion Rate</p>
+  <p class="tile-value">0,65 %</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+17,3 %<span class="tile-prev">vs. 0,55 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">184,58 €</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+21,3 %<span class="tile-prev">vs. 152,11 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Nutzer</p>
+  <p class="tile-value">4.744</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−12,0 %<span class="tile-prev">vs. 5.393</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Warenkorb-Adds</p>
+  <p class="tile-value">361</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−21,5 %<span class="tile-prev">vs. 460</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Checkouts</p>
+  <p class="tile-value">350</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−9,3 %<span class="tile-prev">vs. 386</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Neue Nutzer</p>
+  <p class="tile-value">4.440</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−13,3 %<span class="tile-prev">vs. 5.120</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Engagement Rate</p>
+  <p class="tile-value">58,6 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−0,9 %<span class="tile-prev">vs. 59,1 %</span></p>
+</article></div><div class="subhead"><h3>Conversion Journey</h3></div>
+<figure class="chart fn-card">
+  <figcaption><h3>Conversion-Rate-Aufschlüsselung</h3>
+    <p class="fn-total">0,59 % <span class="fn-delta pos">↗ +1,6 %</span></p>
+    <p>Anteil an allen Sessions; Vergleich 05.–31.08. (GA4-Datenaufbewahrung), darunter die Zahl der Nutzer je Stufe</p></figcaption>
+  <div class="fn-scroll"><div class="fn-grid"><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Sessions</p>
+    <p class="fn-pct">100,00 %</p><p class="fn-num">6.468</p>
+    <span class="fn-delta neg">↘ −4,1 %</span><span class="fn-users">4.744 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:100.00%"><span class="fn-break" aria-hidden="true"></span></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,0.00 100,54.00 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Warenkorb</p>
+    <p class="fn-pct">3,03 %</p><p class="fn-num">196</p>
+    <span class="fn-delta neg">↘ −11,7 %</span><span class="fn-users">181 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:46.00%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,54.00 100,63.39 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Checkout erreicht</p>
+    <p class="fn-pct">2,41 %</p><p class="fn-num">156</p>
+    <span class="fn-delta neg">↘ −12,4 %</span><span class="fn-users">143 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:36.61%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,63.39 100,91.08 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Kauf abgeschlossen</p>
+    <p class="fn-pct">0,59 %</p><p class="fn-num">38</p>
+    <span class="fn-delta neg">↘ −2,6 %</span><span class="fn-users">37 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:8.92%"></span></div>
+</div></div></div>
+</figure></div>
+  </section>
+
+  
+
+  <section>
+    <div class="sec-head"><h2>Klaviyo</h2><p>Flows und Kampagnen</p></div>
+    <div class="tiles headline">
+      <article class="tile">
+  <p class="tile-label">E-Mail-Umsatz gesamt</p>
+  <p class="tile-value">869 $</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−54,1 %<span class="tile-prev">vs. 1.893 $</span></p>
+</article>
+      <article class="tile">
+  <p class="tile-label">davon Flows</p>
+  <p class="tile-value">869 $</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−54,1 %<span class="tile-prev">vs. 1.893 $</span></p>
+</article>
+      
+    </div>
+    
+    <div class="subhead"><h3>Flows</h3></div>
+    <div class="charts"><figure class="chart">
+  <figcaption><h3>Umsatz je Flow</h3><p>Klaviyo · September 2026</p></figcaption>
+  <div class="bars"><div class="bar-row"><span class="bar-name" title="AD Abandoned Checkout">AD Abandoned Checkout</span><span class="bar-track"><span class="bar-fill" style="width:100.0%;background:var(--s1)"></span></span><span class="bar-val">491 $</span></div><div class="bar-row"><span class="bar-name" title="AA Welcome Flow">AA Welcome Flow</span><span class="bar-track"><span class="bar-fill" style="width:77.0%;background:var(--s1)"></span></span><span class="bar-val">378 $</span></div></div>
+</figure></div>
+    <div class="table-wrap"><table>
+  <caption>Flows</caption>
+  <thead><tr><th scope="col">Flow</th><th scope="col">Empfänger</th><th scope="col">Zustellungen</th>
+    <th scope="col">Conv.-Rate</th><th scope="col">Bestellungen</th><th scope="col">Umsatz</th>
+    <th scope="col">Umsatz vs. VM</th></tr></thead>
+  <tbody><tr><td class="name">AD Abandoned Checkout</td><td>22</td><td>22</td><td>13,64 %</td><td>3</td><td class="num-strong">491 $</td><td><span class="chip pos">+334,5 %</span></td></tr><tr><td class="name">AA Welcome Flow</td><td>45</td><td>44</td><td>9,09 %</td><td>4</td><td class="num-strong">378 $</td><td><span class="chip neg">−78,8 %</span></td></tr><tr><td class="name">AB Abandoned Browsing</td><td>9</td><td>8</td><td>0,00 %</td><td>0</td><td class="num-strong">0 $</td><td><span class="chip flat">–</span></td></tr><tr><td class="name">AC Abandoned Cart</td><td>10</td><td>10</td><td>0,00 %</td><td>0</td><td class="num-strong">0 $</td><td><span class="chip flat">–</span></td></tr></tbody>
+  <tfoot><tr><td class="name">Gesamt</td><td>86</td><td>84</td>
+    <td>–</td><td>7</td><td class="num-strong">869 $</td>
+    <td><span class="chip neg">−54,1 %</span></td></tr></tfoot>
+</table></div>
+    <div class="subhead"><h3>Kampagnen</h3></div><p class="sec-note">Für diese Marke werden bislang keine Kampagnen versendet.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Einordnung</h2><p>Was in den Zahlen steckt</p></div>
+    <div class="notes"><ul><li>Vergleichsbasis: In Explore ist Vapormed nur noch ab dem 05.08. abrufbar (GA4-Datenaufbewahrung 2 Monate). Als August-Werte dienen deshalb die vollständigen Zahlen aus dem August-Report (01.–31.08.). Empfehlung: Aufbewahrung auch hier auf 14 Monate stellen.</li><li>Umsatz 6.389 € → 7.752 € (+21,3 %) bei gleich vielen Käufen (42) und 14,7 % weniger Sessions – der Zuwachs kommt allein aus dem höheren Ø Bestellwert (152 € → 185 €).</li><li>Conversion Journey: 181 Nutzer mit Warenkorb (05.–31.08.: 214), Add-to-Cart-Rate 3,03 % (3,29 %). 79,0 % davon erreichten den Checkout (unverändert), aber nur 25,9 % der Checkout-Nutzer kauften (23,1 %) – drei von vier brechen im Checkout ab. Zahlungs- und Versandschritt prüfen.</li><li>Klaviyo-Flows: $1.893 → $869. Der Welcome Flow fällt mit weniger Neuanmeldungen von $1.780 auf $378; Abandoned Checkout steigt auf $491 (3 Bestellungen).</li><li>Vapormed versendet keine eigenen Kampagnen. Im S&amp;B-Account liefen am 18.09. zwei „VAPORMED PMS Survey“-Mails an B2B-Listen (EN/DE, 1 Bestellung, $336) – sie sind im S&amp;B-Kampagnenblock enthalten.</li><li>Das Google-Ads-Konto Vapormed (962-254-3784) hatte auch im September keine Ausgaben.</li></ul></div>
+  </section>
+</div>
+</div>
+<div class="month-panel" data-month="2026-08" data-label="August 2026" data-prev="Juli 2026" hidden>
+<div class="brand-panel" data-brand="snb">
+  <section>
+    <div class="sec-head"><h2>GA4 – E-Commerce</h2><p>Veränderung gegenüber Juli 2026 (02.–31.07., GA4-Datenaufbewahrung)</p></div>
+    <div class="scopes" role="group" aria-label="Shop Scope"><button type="button" class="scope-btn is-active" data-target="total">D2C Gesamt</button><button type="button" class="scope-btn" data-target="main">D2C Main / EU</button><button type="button" class="scope-btn" data-target="us">D2C US</button><button type="button" class="scope-btn" data-target="b2b">B2B</button></div>
+    <div class="scope-panel" data-scope="total"><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">895.769 €</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+22,4 %<span class="tile-prev">vs. 731.771 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Transaktionen</p>
+  <p class="tile-value">4.617</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−0,7 %<span class="tile-prev">vs. 4.649</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Sessions</p>
+  <p class="tile-value">156.536</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+3,1 %<span class="tile-prev">vs. 151.777</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversion Rate</p>
+  <p class="tile-value">2,95 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−3,7 %<span class="tile-prev">vs. 3,06 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">194,02 €</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+23,3 %<span class="tile-prev">vs. 157,40 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Nutzer</p>
+  <p class="tile-value">92.934</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+7,7 %<span class="tile-prev">vs. 86.302</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Warenkorb-Adds</p>
+  <p class="tile-value">27.466</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+2,1 %<span class="tile-prev">vs. 26.913</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Checkouts</p>
+  <p class="tile-value">23.938</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+4,6 %<span class="tile-prev">vs. 22.875</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Neue Nutzer</p>
+  <p class="tile-value">81.064</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+4,4 %<span class="tile-prev">vs. 77.634</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Engagement Rate</p>
+  <p class="tile-value">65,5 %</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+2,8 %<span class="tile-prev">vs. 63,7 %</span></p>
+</article></div><div class="subhead"><h3>Conversion Journey</h3></div>
+<figure class="chart fn-card">
+  <figcaption><h3>Conversion-Rate-Aufschlüsselung</h3>
+    <p class="fn-total">2,92 % <span class="fn-delta flat">–</span></p>
+    <p>Sessions mit add_to_cart, begin_checkout bzw. purchase als Anteil an allen Sessions; kein Juli-Vergleich erhoben</p></figcaption>
+  <div class="fn-scroll"><div class="fn-grid"><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Sessions</p>
+    <p class="fn-pct">100,00 %</p><p class="fn-num">156.536</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">92.934 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:100.00%"><span class="fn-break" aria-hidden="true"></span></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,0.00 100,54.00 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Warenkorb</p>
+    <p class="fn-pct">8,10 %</p><p class="fn-num">12.672</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">10.658 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:46.00%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,54.00 100,63.28 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Checkout erreicht</p>
+    <p class="fn-pct">6,46 %</p><p class="fn-num">10.115</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">8.559 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:36.72%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,63.28 100,83.38 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Kauf abgeschlossen</p>
+    <p class="fn-pct">2,92 %</p><p class="fn-num">4.578</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">4.432 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:16.62%"></span></div>
+</div></div></div>
+</figure></div><div class="scope-panel" data-scope="main" hidden><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">330.922 €</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+76,9 %<span class="tile-prev">vs. 187.060 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Transaktionen</p>
+  <p class="tile-value">1.250</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−2,7 %<span class="tile-prev">vs. 1.285</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Sessions</p>
+  <p class="tile-value">93.145</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+4,9 %<span class="tile-prev">vs. 88.812</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversion Rate</p>
+  <p class="tile-value">1,34 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−7,2 %<span class="tile-prev">vs. 1,45 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">264,74 €</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+81,9 %<span class="tile-prev">vs. 145,57 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Nutzer</p>
+  <p class="tile-value">57.502</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+9,5 %<span class="tile-prev">vs. 52.526</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Warenkorb-Adds</p>
+  <p class="tile-value">11.968</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+0,7 %<span class="tile-prev">vs. 11.879</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Checkouts</p>
+  <p class="tile-value">10.470</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+1,8 %<span class="tile-prev">vs. 10.284</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Neue Nutzer</p>
+  <p class="tile-value">48.099</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+4,4 %<span class="tile-prev">vs. 46.088</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Engagement Rate</p>
+  <p class="tile-value">64,6 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−0,9 %<span class="tile-prev">vs. 65,2 %</span></p>
+</article></div><div class="subhead"><h3>Conversion Journey</h3></div>
+<figure class="chart fn-card">
+  <figcaption><h3>Conversion-Rate-Aufschlüsselung</h3>
+    <p class="fn-total">1,33 % <span class="fn-delta flat">–</span></p>
+    <p>Sessions mit add_to_cart, begin_checkout bzw. purchase als Anteil an allen Sessions; kein Juli-Vergleich erhoben</p></figcaption>
+  <div class="fn-scroll"><div class="fn-grid"><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Sessions</p>
+    <p class="fn-pct">100,00 %</p><p class="fn-num">93.145</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">57.502 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:100.00%"><span class="fn-break" aria-hidden="true"></span></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,0.00 100,54.00 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Warenkorb</p>
+    <p class="fn-pct">5,82 %</p><p class="fn-num">5.424</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">4.692 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:46.00%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,54.00 100,66.30 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Checkout erreicht</p>
+    <p class="fn-pct">4,27 %</p><p class="fn-num">3.974</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">3.410 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:33.70%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,66.30 100,89.48 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Kauf abgeschlossen</p>
+    <p class="fn-pct">1,33 %</p><p class="fn-num">1.241</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">1.203 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:10.52%"></span></div>
+</div></div></div>
+</figure></div><div class="scope-panel" data-scope="us" hidden><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">574.964 €</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+3,8 %<span class="tile-prev">vs. 553.910 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Transaktionen</p>
+  <p class="tile-value">3.421</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+0,1 %<span class="tile-prev">vs. 3.418</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Sessions</p>
+  <p class="tile-value">66.448</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+4,8 %<span class="tile-prev">vs. 63.393</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversion Rate</p>
+  <p class="tile-value">5,15 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−4,5 %<span class="tile-prev">vs. 5,39 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">168,07 €</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+3,7 %<span class="tile-prev">vs. 162,06 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Nutzer</p>
+  <p class="tile-value">39.043</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+6,3 %<span class="tile-prev">vs. 36.718</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Warenkorb-Adds</p>
+  <p class="tile-value">16.300</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+4,1 %<span class="tile-prev">vs. 15.661</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Checkouts</p>
+  <p class="tile-value">14.114</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+7,6 %<span class="tile-prev">vs. 13.115</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Neue Nutzer</p>
+  <p class="tile-value">34.377</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+5,3 %<span class="tile-prev">vs. 32.661</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Engagement Rate</p>
+  <p class="tile-value">67,1 %</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+4,5 %<span class="tile-prev">vs. 64,2 %</span></p>
+</article></div><div class="subhead"><h3>Conversion Journey</h3></div>
+<figure class="chart fn-card">
+  <figcaption><h3>Conversion-Rate-Aufschlüsselung</h3>
+    <p class="fn-total">5,12 % <span class="fn-delta flat">–</span></p>
+    <p>Sessions mit add_to_cart, begin_checkout bzw. purchase als Anteil an allen Sessions; kein Juli-Vergleich erhoben</p></figcaption>
+  <div class="fn-scroll"><div class="fn-grid"><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Sessions</p>
+    <p class="fn-pct">100,00 %</p><p class="fn-num">66.448</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">39.043 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:100.00%"><span class="fn-break" aria-hidden="true"></span></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,0.00 100,54.00 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Warenkorb</p>
+    <p class="fn-pct">11,26 %</p><p class="fn-num">7.481</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">6.297 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:46.00%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,54.00 100,60.86 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Checkout erreicht</p>
+    <p class="fn-pct">9,58 %</p><p class="fn-num">6.365</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">5.383 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:39.14%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,60.86 100,79.09 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Kauf abgeschlossen</p>
+    <p class="fn-pct">5,12 %</p><p class="fn-num">3.401</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">3.283 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:20.91%"></span></div>
+</div></div></div>
+</figure></div><div class="scope-panel" data-scope="b2b" hidden><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">953.759 €</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−10,2 %<span class="tile-prev">vs. 1.061.954 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Transaktionen</p>
+  <p class="tile-value">75</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−22,7 %<span class="tile-prev">vs. 97</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Sessions</p>
+  <p class="tile-value">849</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−24,3 %<span class="tile-prev">vs. 1.121</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversion Rate</p>
+  <p class="tile-value">8,83 %</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+2,1 %<span class="tile-prev">vs. 8,65 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">12.716,79 €</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+16,2 %<span class="tile-prev">vs. 10.947,98 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Nutzer</p>
+  <p class="tile-value">498</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−15,3 %<span class="tile-prev">vs. 588</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Warenkorb-Adds</p>
+  <p class="tile-value">635</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−19,8 %<span class="tile-prev">vs. 792</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Checkouts</p>
+  <p class="tile-value">356</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−12,7 %<span class="tile-prev">vs. 408</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Neue Nutzer</p>
+  <p class="tile-value">125</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−41,6 %<span class="tile-prev">vs. 214</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Engagement Rate</p>
+  <p class="tile-value">78,7 %</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+0,7 %<span class="tile-prev">vs. 78,1 %</span></p>
+</article></div><div class="subhead"><h3>Conversion Journey</h3></div>
+<figure class="chart fn-card">
+  <figcaption><h3>Conversion-Rate-Aufschlüsselung</h3>
+    <p class="fn-total">7,77 % <span class="fn-delta flat">–</span></p>
+    <p>Sessions mit add_to_cart, begin_checkout bzw. purchase als Anteil an allen Sessions; kein Juli-Vergleich erhoben</p></figcaption>
+  <div class="fn-scroll"><div class="fn-grid"><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Sessions</p>
+    <p class="fn-pct">100,00 %</p><p class="fn-num">849</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">498 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:100.00%"><span class="fn-break" aria-hidden="true"></span></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,0.00 100,54.00 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Warenkorb</p>
+    <p class="fn-pct">11,07 %</p><p class="fn-num">94</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">56 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:46.00%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,54.00 100,56.94 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Checkout erreicht</p>
+    <p class="fn-pct">10,37 %</p><p class="fn-num">88</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">54 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:43.06%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,56.94 100,67.70 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Kauf abgeschlossen</p>
+    <p class="fn-pct">7,77 %</p><p class="fn-num">66</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">44 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:32.30%"></span></div>
+</div></div></div>
+</figure></div>
+  </section>
+
+  <section>
+  <div class="sec-head"><h2>Google Ads</h2><p>je Konto</p></div>
+  <p class="sec-note">Conversions und Conv.-Wert August: Stand 05.10. aus der Kontotabelle im Verwaltungskonto (primäre Conversion-Aktionen, inkl. Nachbuchungen). Im Juli lieferte das Conversion-Tracking im Main-Konto noch keine Werte (2 Conversions, 5 € Wert), der ROAS-Vergleich zum Vormonat ist deshalb nicht aussagekräftig. Das US-Konto startete am 15.08. – für Juli gibt es dort keine Vergleichswerte.</p>
+  <div class="subhead"><h3>Main / EU</h3>
+  <span class="acct">865-054-3349</span></div>
+<div class="tiles">
+<article class="tile">
+  <p class="tile-label">Conv.-Wert (Umsatz)</p>
+  <p class="tile-value">2.036,62 €</p>
+  <p class="tile-delta flat"></p><span class="tile-note">Vormonat ohne belastbare Conversion-Werte</span>
+</article>
+<article class="tile">
+  <p class="tile-label">ROAS</p>
+  <p class="tile-value">0,61x</p>
+  <p class="tile-delta flat"></p><span class="tile-note">Vormonat ohne belastbare Conversion-Werte</span>
+</article>
+<article class="tile">
+  <p class="tile-label">Kosten</p>
+  <p class="tile-value">3.315,30 €</p>
+  <p class="tile-delta neg"><span class="arrow">↑</span>+6,0 %<span class="tile-prev">vs. 3.127,13 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversions</p>
+  <p class="tile-value">67</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+3.250,0 %<span class="tile-prev">vs. 2</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Kosten je Conv.</p>
+  <p class="tile-value">49,48 €</p>
+  <p class="tile-delta pos"><span class="arrow">↓</span>−96,8 %<span class="tile-prev">vs. 1.563,57 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Klicks</p>
+  <p class="tile-value">2.111</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+106,2 %<span class="tile-prev">vs. 1.024</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Impressionen</p>
+  <p class="tile-value">51.789</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+198,9 %<span class="tile-prev">vs. 17.329</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">CTR</p>
+  <p class="tile-value">4,08 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−31,0 %<span class="tile-prev">vs. 5,91 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø CPC</p>
+  <p class="tile-value">1,57 €</p>
+  <p class="tile-delta pos"><span class="arrow">↓</span>−48,6 %<span class="tile-prev">vs. 3,05 €</span></p>
+</article>
+</div>
+<div class="subhead"><h3>US</h3>
+  <span class="acct">290-994-6441</span></div>
+<div class="tiles">
+<article class="tile">
+  <p class="tile-label">Conv.-Wert (Umsatz)</p>
+  <p class="tile-value">434,93 €</p>
+  <p class="tile-delta flat"><span class="tile-prev">kein Vormonatswert</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">ROAS</p>
+  <p class="tile-value">0,25x</p>
+  <p class="tile-delta flat"><span class="tile-prev">kein Vormonatswert</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Kosten</p>
+  <p class="tile-value">1.770,72 €</p>
+  <p class="tile-delta flat"><span class="tile-prev">kein Vormonatswert</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversions</p>
+  <p class="tile-value">8</p>
+  <p class="tile-delta flat"><span class="tile-prev">kein Vormonatswert</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Kosten je Conv.</p>
+  <p class="tile-value">221,34 €</p>
+  <p class="tile-delta flat"><span class="tile-prev">kein Vormonatswert</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Klicks</p>
+  <p class="tile-value">855</p>
+  <p class="tile-delta flat"><span class="tile-prev">kein Vormonatswert</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Impressionen</p>
+  <p class="tile-value">36.769</p>
+  <p class="tile-delta flat"><span class="tile-prev">kein Vormonatswert</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">CTR</p>
+  <p class="tile-value">2,33 %</p>
+  <p class="tile-delta flat"><span class="tile-prev">kein Vormonatswert</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø CPC</p>
+  <p class="tile-value">2,07 €</p>
+  <p class="tile-delta flat"><span class="tile-prev">kein Vormonatswert</span></p>
+</article>
+</div>
+</section>
+
+  <section>
+    <div class="sec-head"><h2>Klaviyo</h2><p>Flows und Kampagnen</p></div>
+    <div class="tiles headline">
+      <article class="tile">
+  <p class="tile-label">E-Mail-Umsatz gesamt</p>
+  <p class="tile-value">189.833 $</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+300,6 %<span class="tile-prev">vs. 47.392 $</span></p>
+</article>
+      <article class="tile">
+  <p class="tile-label">davon Flows</p>
+  <p class="tile-value">53.595 $</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+27,5 %<span class="tile-prev">vs. 42.025 $</span></p>
+</article>
+      <article class="tile">
+  <p class="tile-label">davon B2B (b2b = true)</p>
+  <p class="tile-value">10.839 $</p>
+  <p class="tile-delta flat"></p><span class="tile-note">B2B Cannafair EN EU 8.321 $, Welcome Flow DE 2.518 $</span>
+</article><article class="tile">
+  <p class="tile-label">davon D2C</p>
+  <p class="tile-value">178.995 $</p>
+  <p class="tile-delta flat"></p><span class="tile-note">E-Mail-Umsatz gesamt − B2B</span>
+</article>
+    </div>
+    <div class="subhead"><h3>Gesamter Shop-Umsatz laut Magento (nicht E-Mail-Umsatz): D2C und B2B</h3></div><p class="sec-note">Das ist der gesamte Umsatz aller Shop-Bestellungen, nicht der durch E-Mails erzielte Umsatz (der steht oben als „E-Mail-Umsatz gesamt“). Klaviyo dient hier nur als Datenquelle für die Magento-Bestellungen. Bestellungen, die Magento an Klaviyo meldet („Placed Order“), getrennt nach der Profileigenschaft b2b = true (B2B, erst ab Juli befüllt) und allen übrigen Profilen (D2C). Beträge laut Klaviyo in $. D2C enthält im August einen Ausreißer von rund 9,4 Mio. $ (Magento-Website-ID 8, Woche ab 03.08.) – im Magento-Backend prüfen.</p><div class="scopes kscopes" role="group" aria-label="Umsatz-Ansicht"><button type="button" class="kscope-btn is-active" data-target="d2c">D2C</button><button type="button" class="kscope-btn" data-target="b2b">B2B (b2b = true)</button></div><div class="kscope-panel" data-kscope="d2c"><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">10.978.253 $</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+528,2 %<span class="tile-prev">vs. 1.747.575 $</span></p>
+</article><article class="tile">
+  <p class="tile-label">Bestellungen</p>
+  <p class="tile-value">8.789</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+5,8 %<span class="tile-prev">vs. 8.311</span></p>
+</article><article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">1.249,09 $</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+494,0 %<span class="tile-prev">vs. 210,27 $</span></p>
+</article></div></div><div class="kscope-panel" data-kscope="b2b" hidden><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">1.458.338 $</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+117,7 %<span class="tile-prev">vs. 669.992 $</span></p>
+</article><article class="tile">
+  <p class="tile-label">Bestellungen</p>
+  <p class="tile-value">115</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+66,7 %<span class="tile-prev">vs. 69</span></p>
+</article><article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">12.681,20 $</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+30,6 %<span class="tile-prev">vs. 9.710,03 $</span></p>
+</article></div></div>
+    <div class="subhead"><h3>Flows</h3></div>
+    <div class="charts"><figure class="chart">
+  <figcaption><h3>Umsatz je Flow</h3><p>Klaviyo · August 2026</p></figcaption>
+  <div class="bars"><div class="bar-row"><span class="bar-name" title="AA Welcome Flow">AA Welcome Flow</span><span class="bar-track"><span class="bar-fill" style="width:100.0%;background:var(--s1)"></span></span><span class="bar-val">33.897 $</span></div><div class="bar-row"><span class="bar-name" title="AD Abandoned Checkout">AD Abandoned Checkout</span><span class="bar-track"><span class="bar-fill" style="width:36.6%;background:var(--s1)"></span></span><span class="bar-val">12.407 $</span></div><div class="bar-row"><span class="bar-name" title="AC Abandoned Cart">AC Abandoned Cart</span><span class="bar-track"><span class="bar-fill" style="width:15.3%;background:var(--s1)"></span></span><span class="bar-val">5.192 $</span></div><div class="bar-row"><span class="bar-name" title="AB Abandoned Browsing">AB Abandoned Browsing</span><span class="bar-track"><span class="bar-fill" style="width:6.1%;background:var(--s1)"></span></span><span class="bar-val">2.075 $</span></div><div class="bar-row"><span class="bar-name" title="Event Sign up Flow EN">Event Sign up Flow EN</span><span class="bar-track"><span class="bar-fill" style="width:2.0%;background:var(--s1)"></span></span><span class="bar-val">24 $</span></div></div>
+</figure></div>
+    <div class="table-wrap"><table>
+  <caption>Flows</caption>
+  <thead><tr><th scope="col">Flow</th><th scope="col">Empfänger</th><th scope="col">Zustellungen</th>
+    <th scope="col">Conv.-Rate</th><th scope="col">Bestellungen</th><th scope="col">Umsatz</th>
+    <th scope="col">Umsatz vs. VM</th></tr></thead>
+  <tbody><tr><td class="name">AA Welcome Flow</td><td>1.732</td><td>1.674</td><td>8,30 %</td><td>139</td><td class="num-strong">33.897 $</td><td><span class="chip neg">−13,8 %</span></td></tr><tr><td class="name">AD Abandoned Checkout</td><td>1.794</td><td>1.608</td><td>5,16 %</td><td>83</td><td class="num-strong">12.407 $</td><td><span class="chip pos">+437,8 %</span></td></tr><tr><td class="name">AC Abandoned Cart</td><td>1.113</td><td>977</td><td>3,07 %</td><td>30</td><td class="num-strong">5.192 $</td><td><span class="chip pos">+1.454,5 %</span></td></tr><tr><td class="name">AB Abandoned Browsing</td><td>1.406</td><td>1.246</td><td>1,53 %</td><td>19</td><td class="num-strong">2.075 $</td><td><span class="chip pos">+4.615,9 %</span></td></tr><tr><td class="name">Event Sign up Flow EN</td><td>111</td><td>103</td><td>0,97 %</td><td>1</td><td class="num-strong">24 $</td><td><span class="chip flat">neu</span></td></tr><tr><td class="name">Friendship Day Sign up Flow</td><td>36</td><td>36</td><td>0,00 %</td><td>0</td><td class="num-strong">0 $</td><td><span class="chip flat">neu</span></td></tr><tr><td class="name">Event Sign up Flow DE</td><td>2</td><td>2</td><td>0,00 %</td><td>0</td><td class="num-strong">0 $</td><td><span class="chip flat">neu</span></td></tr></tbody>
+  <tfoot><tr><td class="name">Gesamt</td><td>6.194</td><td>5.646</td>
+    <td>–</td><td>272</td><td class="num-strong">53.595 $</td>
+    <td><span class="chip pos">+27,5 %</span></td></tr></tfoot>
+</table></div>
+    <div class="subhead"><h3>Kampagnen</h3></div><div class="tiles"><article class="tile">
+  <p class="tile-label">Kampagnen-Umsatz</p>
+  <p class="tile-value">136.238 $</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+2.438,2 %<span class="tile-prev">vs. 5.367 $</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Versendete Kampagnen</p>
+  <p class="tile-value">29</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+866,7 %<span class="tile-prev">vs. 3</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Empfänger</p>
+  <p class="tile-value">356.551</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+15.939,2 %<span class="tile-prev">vs. 2.223</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Open Rate</p>
+  <p class="tile-value">40,5 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−17,9 %<span class="tile-prev">vs. 49,4 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Click Rate</p>
+  <p class="tile-value">3,03 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−5,0 %<span class="tile-prev">vs. 3,19 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Bestellungen</p>
+  <p class="tile-value">858</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+1.992,7 %<span class="tile-prev">vs. 41</span></p>
+</article></div><div class="table-wrap"><table>
+  <caption>Top-Kampagnen nach Umsatz · August 2026</caption>
+  <thead><tr><th scope="col">Kampagne</th><th scope="col">Empfänger</th><th scope="col">Open</th>
+    <th scope="col">Click</th><th scope="col">Bestellungen</th><th scope="col">Umsatz</th></tr></thead>
+  <tbody><tr><td class="name">US Friendship Day Second Invitation 11.08.26 (b)</td><td>17.960</td><td>38,8 %</td><td>0,57 %</td><td>36</td><td class="num-strong">30.649,57 $</td></tr><tr><td class="name">Smokeless September EN</td><td>56.695</td><td>38,5 %</td><td>1,81 %</td><td>167</td><td class="num-strong">23.348,93 $</td></tr><tr><td class="name">US Friendship Day We missed you</td><td>42.237</td><td>39,5 %</td><td>1,67 %</td><td>107</td><td class="num-strong">16.359,67 $</td></tr><tr><td class="name">Summer Rituals EN</td><td>22.099</td><td>41,5 %</td><td>1,53 %</td><td>88</td><td class="num-strong">9.562,38 $</td></tr><tr><td class="name">B2B Cannafair 2026 EN EU</td><td>510</td><td>47,6 %</td><td>0,98 %</td><td>3</td><td class="num-strong">8.320,59 $</td></tr><tr><td class="name">Hands Free VEAZY EN Wave 2</td><td>17.720</td><td>39,1 %</td><td>4,17 %</td><td>53</td><td class="num-strong">6.809,20 $</td></tr><tr><td class="name">Hands Free VEAZY EN</td><td>17.749</td><td>39,2 %</td><td>4,26 %</td><td>47</td><td class="num-strong">5.325,74 $</td></tr><tr><td class="name">Smokeless September DE</td><td>32.442</td><td>42,4 %</td><td>3,33 %</td><td>53</td><td class="num-strong">4.201,84 $</td></tr><tr><td class="name">US Friendship Day 07.08 US – Wave 1</td><td>8.376</td><td>43,4 %</td><td>1,78 %</td><td>35</td><td class="num-strong">4.121,24 $</td></tr><tr><td class="name">Hands Free VEAZY DE</td><td>23.999</td><td>36,9 %</td><td>7,91 %</td><td>34</td><td class="num-strong">3.640,92 $</td></tr></tbody>
+</table></div><figure class="chart">
+  <figcaption><h3>Umsatz je Kampagne (Top 10)</h3><p>Klaviyo · August 2026</p></figcaption>
+  <div class="bars"><div class="bar-row"><span class="bar-name" title="US Friendship Day Second Invitation 11.08.26 (b)">US Friendship Day Second Invitation 11.08.26 (b)</span><span class="bar-track"><span class="bar-fill" style="width:100.0%;background:var(--s2)"></span></span><span class="bar-val">30.650 $</span></div><div class="bar-row"><span class="bar-name" title="Smokeless September EN">Smokeless September EN</span><span class="bar-track"><span class="bar-fill" style="width:76.2%;background:var(--s2)"></span></span><span class="bar-val">23.349 $</span></div><div class="bar-row"><span class="bar-name" title="US Friendship Day We missed you">US Friendship Day We missed you</span><span class="bar-track"><span class="bar-fill" style="width:53.4%;background:var(--s2)"></span></span><span class="bar-val">16.360 $</span></div><div class="bar-row"><span class="bar-name" title="Summer Rituals EN">Summer Rituals EN</span><span class="bar-track"><span class="bar-fill" style="width:31.2%;background:var(--s2)"></span></span><span class="bar-val">9.562 $</span></div><div class="bar-row"><span class="bar-name" title="B2B Cannafair 2026 EN EU">B2B Cannafair 2026 EN EU</span><span class="bar-track"><span class="bar-fill" style="width:27.1%;background:var(--s2)"></span></span><span class="bar-val">8.321 $</span></div><div class="bar-row"><span class="bar-name" title="Hands Free VEAZY EN Wave 2">Hands Free VEAZY EN Wave 2</span><span class="bar-track"><span class="bar-fill" style="width:22.2%;background:var(--s2)"></span></span><span class="bar-val">6.809 $</span></div><div class="bar-row"><span class="bar-name" title="Hands Free VEAZY EN">Hands Free VEAZY EN</span><span class="bar-track"><span class="bar-fill" style="width:17.4%;background:var(--s2)"></span></span><span class="bar-val">5.326 $</span></div><div class="bar-row"><span class="bar-name" title="Smokeless September DE">Smokeless September DE</span><span class="bar-track"><span class="bar-fill" style="width:13.7%;background:var(--s2)"></span></span><span class="bar-val">4.202 $</span></div><div class="bar-row"><span class="bar-name" title="US Friendship Day 07.08 US – Wave 1">US Friendship Day 07.08 US – Wave 1</span><span class="bar-track"><span class="bar-fill" style="width:13.4%;background:var(--s2)"></span></span><span class="bar-val">4.121 $</span></div><div class="bar-row"><span class="bar-name" title="Hands Free VEAZY DE">Hands Free VEAZY DE</span><span class="bar-track"><span class="bar-fill" style="width:11.9%;background:var(--s2)"></span></span><span class="bar-val">3.641 $</span></div></div>
+</figure>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Einordnung</h2><p>Was in den Zahlen steckt</p></div>
+    <div class="notes"><ul><li>Datenbasis korrigiert: Die GA4-Property misst D2C (www.storz-bickel.com) und B2B (b2b.storz-bickel.com) in einem Datenstrom. Die Zahlen sind jetzt nach Hostname getrennt. Die frühere Aussage „Main/EU −29 %, US +30 %“ war ein Artefakt dieser Vermischung und ist zurückgezogen.</li><li>D2C-Umsatz 731.771 € → 895.769 € (+22,4 %) bei praktisch gleicher Bestellzahl (4.649 → 4.617). Der Zuwachs kommt fast vollständig aus Main/EU, wo der durchschnittliche Bestellwert von 146 € auf 265 € springt. Diesen AOV-Sprung vor der Kundenkommunikation gegenprüfen – er kann auch aus einzelnen Großbestellungen im D2C-Shop stammen.</li><li>B2B ist umsatzseitig größer als D2C: 75 Bestellungen erzeugen 953.759 €, darunter Einzelbestellungen über 367.000 €. B2B ist stark schwankend und spiegelt keine Marketing-Leistung – der Block steht deshalb getrennt.</li><li>Juli umfasst nur den 02.–31.07.: GA4 hält Explore-Daten in dieser Property nur 2 Monate vor. Empfehlung an S&amp;B: Datenaufbewahrung in GA4 Admin auf 14 Monate stellen, sonst fehlen künftig in jedem Monatsvergleich Tage.</li><li>Google Ads Main: 3.315 € Kosten stehen 2.037 € Conversion-Wert gegenüber – ROAS 0,61 (der ursprünglich berichtete Wert 7.012 € war der „Wert aller Conv.“ inkl. sekundärer Aktionen). Das US-Konto liegt nach dem Start am 15.08. bei 1.771 € Kosten und 435 € Conv.-Wert (ROAS 0,25) und ist noch in der Lernphase.</li><li>August ist der erste vollständige Monat im Klaviyo-Vollbetrieb nach der Mapp-Abschaltung: 29 Kampagnen an 356.551 Empfänger gegenüber 3 Kampagnen im Juli.</li><li>Der Welcome Flow bekam deutlich mehr Empfänger (435 → 1.732), verlor dabei aber Umsatz (39.340 $ → 33.897 $) und Conversion-Rate (14,39 % → 8,30 %) – typisch beim Wechsel von einer kleinen, sehr warmen Zielgruppe auf breiten Regelbetrieb.</li><li>Google Ads Main: bei nahezu gleichem Budget +106 % Klicks und ein von 3,05 € auf 1,57 € halbierter CPC. Conversions 2 → 67.</li><li>Nebenbefund: Der Staging-Server mcstaging.storz-bickel.com sendet in die Produktions-Property (August 2 Transaktionen / 647,70 €). Sollte im Tracking ausgeschlossen werden.</li><li>Korrektur vom 05.10.: Google-Ads-Werte auf den Conv.-Wert (statt „Wert aller Conv.“) umgestellt; Kampagnen-Empfänger jetzt als tatsächliche Empfängerzahl (vorher Zahl der Öffner). Die Juli-Vergleichswerte der Kampagnen stammen unverändert aus dem Juli-Report.</li></ul></div>
+  </section>
+</div>
+<div class="brand-panel" data-brand="vapormed" hidden>
+  <section>
+    <div class="sec-head"><h2>GA4 – E-Commerce</h2><p>Veränderung gegenüber Juli 2026 (02.–31.07., GA4-Datenaufbewahrung)</p></div>
+    
+    <div class="scope-panel" data-scope="total"><div class="tiles"><article class="tile">
+  <p class="tile-label">Umsatz</p>
+  <p class="tile-value">6.389 €</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−40,7 %<span class="tile-prev">vs. 10.779 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Transaktionen</p>
+  <p class="tile-value">42</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−32,3 %<span class="tile-prev">vs. 62</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Sessions</p>
+  <p class="tile-value">7.587</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+22,9 %<span class="tile-prev">vs. 6.173</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Conversion Rate</p>
+  <p class="tile-value">0,55 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−44,9 %<span class="tile-prev">vs. 1,00 %</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Ø Bestellwert</p>
+  <p class="tile-value">152,11 €</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−12,5 %<span class="tile-prev">vs. 173,85 €</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Nutzer</p>
+  <p class="tile-value">5.393</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+33,3 %<span class="tile-prev">vs. 4.046</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Warenkorb-Adds</p>
+  <p class="tile-value">460</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−17,0 %<span class="tile-prev">vs. 554</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Checkouts</p>
+  <p class="tile-value">386</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−23,7 %<span class="tile-prev">vs. 506</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Neue Nutzer</p>
+  <p class="tile-value">5.120</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+34,3 %<span class="tile-prev">vs. 3.812</span></p>
+</article>
+<article class="tile">
+  <p class="tile-label">Engagement Rate</p>
+  <p class="tile-value">59,1 %</p>
+  <p class="tile-delta neg"><span class="arrow">↓</span>−7,6 %<span class="tile-prev">vs. 64,0 %</span></p>
+</article></div><div class="subhead"><h3>Conversion Journey</h3></div>
+<figure class="chart fn-card">
+  <figcaption><h3>Conversion-Rate-Aufschlüsselung</h3>
+    <p class="fn-total">0,58 % <span class="fn-delta flat">–</span></p>
+    <p>Zeitraum 05.–31.08. (GA4-Datenaufbewahrung); kein Juli-Vergleich erhoben</p></figcaption>
+  <div class="fn-scroll"><div class="fn-grid"><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Sessions</p>
+    <p class="fn-pct">100,00 %</p><p class="fn-num">6.742</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">4.878 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:100.00%"><span class="fn-break" aria-hidden="true"></span></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,0.00 100,54.00 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Warenkorb</p>
+    <p class="fn-pct">3,29 %</p><p class="fn-num">222</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">214 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:46.00%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,54.00 100,63.12 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Checkout erreicht</p>
+    <p class="fn-pct">2,64 %</p><p class="fn-num">178</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">169 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:36.88%"></span><svg class="fn-conn" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,63.12 100,91.92 100,100 0,100"/></svg></div>
+</div><div class="fn-col">
+  <div class="fn-head"><p class="fn-label">Kauf abgeschlossen</p>
+    <p class="fn-pct">0,58 %</p><p class="fn-num">39</p>
+    <span class="fn-delta flat">–</span><span class="fn-users">39 Nutzer</span></div>
+  <div class="fn-plot"><span class="fn-bar" style="height:8.08%"></span></div>
+</div></div></div>
+</figure></div>
+  </section>
+
+  
+
+  <section>
+    <div class="sec-head"><h2>Klaviyo</h2><p>Flows und Kampagnen</p></div>
+    <div class="tiles headline">
+      <article class="tile">
+  <p class="tile-label">E-Mail-Umsatz gesamt</p>
+  <p class="tile-value">1.893 $</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+345,4 %<span class="tile-prev">vs. 425 $</span></p>
+</article>
+      <article class="tile">
+  <p class="tile-label">davon Flows</p>
+  <p class="tile-value">1.893 $</p>
+  <p class="tile-delta pos"><span class="arrow">↑</span>+345,4 %<span class="tile-prev">vs. 425 $</span></p>
+</article>
+      
+    </div>
+    
+    <div class="subhead"><h3>Flows</h3></div>
+    <div class="charts"><figure class="chart">
+  <figcaption><h3>Umsatz je Flow</h3><p>Klaviyo · August 2026</p></figcaption>
+  <div class="bars"><div class="bar-row"><span class="bar-name" title="AA Welcome Flow">AA Welcome Flow</span><span class="bar-track"><span class="bar-fill" style="width:100.0%;background:var(--s1)"></span></span><span class="bar-val">1.780 $</span></div><div class="bar-row"><span class="bar-name" title="AD Abandoned Checkout">AD Abandoned Checkout</span><span class="bar-track"><span class="bar-fill" style="width:6.3%;background:var(--s1)"></span></span><span class="bar-val">113 $</span></div></div>
+</figure></div>
+    <div class="table-wrap"><table>
+  <caption>Flows</caption>
+  <thead><tr><th scope="col">Flow</th><th scope="col">Empfänger</th><th scope="col">Zustellungen</th>
+    <th scope="col">Conv.-Rate</th><th scope="col">Bestellungen</th><th scope="col">Umsatz</th>
+    <th scope="col">Umsatz vs. VM</th></tr></thead>
+  <tbody><tr><td class="name">AA Welcome Flow</td><td>106</td><td>106</td><td>7,55 %</td><td>8</td><td class="num-strong">1.780 $</td><td><span class="chip pos">+318,8 %</span></td></tr><tr><td class="name">AD Abandoned Checkout</td><td>12</td><td>12</td><td>8,33 %</td><td>1</td><td class="num-strong">113 $</td><td><span class="chip flat">–</span></td></tr><tr><td class="name">AC Abandoned Cart</td><td>27</td><td>27</td><td>0,00 %</td><td>0</td><td class="num-strong">0 $</td><td><span class="chip flat">neu</span></td></tr><tr><td class="name">AB Abandoned Browsing</td><td>19</td><td>19</td><td>5,26 %</td><td>1</td><td class="num-strong">0 $</td><td><span class="chip flat">neu</span></td></tr></tbody>
+  <tfoot><tr><td class="name">Gesamt</td><td>164</td><td>164</td>
+    <td>–</td><td>10</td><td class="num-strong">1.893 $</td>
+    <td><span class="chip pos">+345,4 %</span></td></tr></tfoot>
+</table></div>
+    <div class="subhead"><h3>Kampagnen</h3></div><p class="sec-note">Für diese Marke werden bislang keine Kampagnen versendet.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Einordnung</h2><p>Was in den Zahlen steckt</p></div>
+    <div class="notes"><ul><li>Hostname-Prüfung: Vapormed läuft ausschließlich über www.vapormed.com – kein B2B-Shop, keine Vermischung. Die Zahlen sind unverändert gültig.</li><li>Juli umfasst nur den 02.–31.07. (GA4-Datenaufbewahrung 2 Monate).</li><li>Traffic wächst (+22,9 % Sessions), Käufe und Umsatz gehen aber deutlich zurück (62 → 42 Käufe, −40,7 % Umsatz). Add-to-Carts und Checkouts sind ebenfalls gefallen, obwohl mehr Nutzer da waren – der Funnel verliert früher als im Vormonat.</li><li>Vapormed versendet bisher keine Kampagnen – nur Flows. Der gesamte E-Mail-Umsatz kommt aus dem Welcome Flow.</li><li>Das Google-Ads-Konto Vapormed (962-254-3784) hatte in Juli und August null Ausgaben.</li></ul></div>
+  </section>
+</div>
+</div>
+  <footer>
+    <span>Velonify · Julian Buchmann · julian@velonify.de</span>
+    <span>Erstellt am 05.10.2026 · Quellen: GA4, Google Ads, Klaviyo · Klaviyo-Beträge in $</span>
+  </footer>
+</main>
+
+<script>
+(function () {
+  function group(btnSel, panelSel, attr) {
+    var btns = Array.prototype.slice.call(document.querySelectorAll(btnSel));
+    btns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var scope = b.closest("[data-brand]") || document;
+        var target = b.getAttribute("data-target");
+        Array.prototype.slice.call(scope.querySelectorAll(btnSel)).forEach(function (x) {
+          x.classList.remove("is-active");
+        });
+        b.classList.add("is-active");
+        Array.prototype.slice.call(scope.querySelectorAll(panelSel)).forEach(function (p) {
+          p.hidden = p.getAttribute(attr) !== target;
+        });
+      });
+    });
+  }
+  group(".brand-btn", ".brand-panel", "data-brand");
+  group(".scope-btn", ".scope-panel", "data-scope");
+  group(".kscope-btn", ".kscope-panel", "data-kscope");
+  var sel = document.getElementById("month-select");
+  if (sel) {
+    sel.addEventListener("change", function () {
+      Array.prototype.slice.call(document.querySelectorAll(".month-panel")).forEach(function (p) {
+        var on = p.getAttribute("data-month") === sel.value;
+        p.hidden = !on;
+        if (on) {
+          document.getElementById("m-cur").textContent = p.getAttribute("data-label");
+          document.getElementById("m-prev").textContent = p.getAttribute("data-prev");
+        }
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
